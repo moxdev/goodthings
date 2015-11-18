@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'help' => 'static_pages#help'
   get 'developer' => 'static_pages#developer'
   get 'terms' => 'static_pages#terms'
+  get 'contact' => 'static_pages#contact'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

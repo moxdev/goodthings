@@ -1,0 +1,53 @@
+// Add custom SCSS here
+@import "variables";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding-top: 60px;
+}
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: #555;
+  a {
+    color: $link-color;
+    &:hover {
+      color: $gray-dark;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
+
+/* debug formatting */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
