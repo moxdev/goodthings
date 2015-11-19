@@ -49,9 +49,6 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
-  # To enable features such as static asset serving and logging on Heroku
-  gem 'rails_12factor', group: :production
-
   # Watches files for changes and refreshes browser
   gem "guard", ">= 2.2.2", :require => false
   gem "guard-livereload",  :require => false
@@ -69,5 +66,13 @@ group :production do
   gem 'rails_12factor'
   gem 'puma'
 end
+
+# Devise and OAuth Gems
+gem 'therubyracer'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-google'
 
 ruby "2.2.0"
