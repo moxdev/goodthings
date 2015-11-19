@@ -7,7 +7,7 @@ body {
     width: 100%;
     height: 100%;
     margin: 0;
-    padding-top: 60px;
+    padding-top: 70px;
 }
 
 @mixin box_sizing {
@@ -16,7 +16,18 @@ body {
   box-sizing:         border-box;
 }
 
-/* footer */
+// Home Page
+
+#logo {
+  font-size: 1.5em;
+}
+.btn.btn-lg.btn-primary {
+  border-radius: 999em;
+  width: 150px;
+}
+
+
+// footer
 
 footer {
   margin-top: 45px;
