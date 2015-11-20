@@ -75,4 +75,8 @@ gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-google'
 
+# Hirb for Rails Console formatting
+gem 'hirb'
+
+
 ruby "2.2.0"
