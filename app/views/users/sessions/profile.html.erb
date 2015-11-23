@@ -1,0 +1,28 @@
+
+<% provide(:title, current_user.email) %>
+<div class="row">
+    <aside class="col-md-4">
+        <section class="user_info">
+            <h1>
+                <%= gravatar_for current_user %>
+                <%= current_user.email %>
+                <br />
+                <br />
+                <%= button_to "Edit Profile", edit_user_registration_path, :method => :get, class: "btn btn-primary" %>
+            </h1>
+        </section>
+    </aside>
+    <div class="col-md-8">
+    <h1>Profile</h1>
+    <%= @user.email %>
+    <% if current_user.posts.any? %>
+      <h3>Posts (<%= current_user.posts.count %>)</h3>
+      <ol class="posts">
+      <%= current_user.posts. %>
+
+      </ol>
+
+    <% end %>
+  </div>
+</div>
+<!-- /.row -->
