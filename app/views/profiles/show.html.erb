@@ -5,6 +5,7 @@
             <h1>
                 <%= gravatar_for current_user %>
                 <%= current_user.email %>
+                <%= @email %>
                 <br />
                 <br />
                 <%= button_to "Edit Profile", edit_user_registration_path, :method => :get, class: "btn btn-primary" %>
