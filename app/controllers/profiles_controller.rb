@@ -1,6 +1,6 @@
 class ProfilesController < ApplicationController
   def show
     @user = current_user
-    @email = @user.email
+    @microposts = @user.microposts.paginate(page: params[:page])
   end
 end

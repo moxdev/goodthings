@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   get 'developer' => 'static_pages#developer'
   get 'terms' => 'static_pages#terms'
   get 'contact' => 'static_pages#contact'
-
   get 'profile' => 'profiles#show'
+  resources :microposts, only:[:create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

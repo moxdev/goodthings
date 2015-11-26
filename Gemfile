@@ -78,5 +78,8 @@ gem 'omniauth-google'
 # Hirb for Rails Console formatting
 gem 'hirb'
 
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 ruby "2.2.0"
