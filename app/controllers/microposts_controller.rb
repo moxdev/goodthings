@@ -3,17 +3,40 @@ class MicropostsController < ApplicationController
 
     def index
         @micropost = Micropost.paginate(page: params[:page])
-    end
-
-    def create
-        @createpost = current_user.microposts.build(micropost_params)
+        @createpost = current_user.microposts.build
         if @createpost.save
             flash[:success] = "Post successfully created!"
             redirect_to profile_path
         else
             flash[:error] = "Post was not created!"
-            render profile_path
+
         end
+    end
+
+    def new
+        @createpost = current_user.microposts.build
+        if @createpost.save
+            flash[:success] = "Post successfully created!"
+            redirect_to profile_path
+        else
+            flash[:error] = "Post was not created!"
+            redirect_to profile_path
+
+        end
+        new_micropost_path
+
+    end
+
+    def create
+        @createpost = current_user.microposts.build
+        if @createpost.save
+            flash[:success] = "Post successfully created!"
+            redirect_to profile_path
+        else
+            flash[:error] = "Post was not created!"
+
+        end
+
     end
 
     def destroy
@@ -21,8 +44,8 @@ class MicropostsController < ApplicationController
 
     private
 
-    def micropost_params
-      params.require(:micropost).permit(:content)
-    end
+    # def micropost_params
+    #   params.require(:micropost).permit(:content)
+    # end
 
 end
